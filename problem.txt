@@ -1,0 +1,3 @@
+Currently when I log in to the app, there is a "redirect_uri: Not matching configuration" error that is most likely to be caused by the window.location.origin going to a URI that is not matching the Spotify developer dashboard. Fix the redirect so it always uses the correct `http://127.0.0.1:4200/` only during local development. 
+
+There is also an known problem with loading the Spotify data before the redirect issue existed. None of the song lists are loading. They just show loading icon perpetually. This is reproducible as soon as you log in as a user. After the fix, the user should be able to view the lists of songs and play them.
